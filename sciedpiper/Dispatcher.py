@@ -178,7 +178,7 @@ class LocalRunner(Runner):
         with open(str_full_script_name, "w") as hndl_write_script:
             hndl_write_script.write("\n".join(lstr_script))
         # Make file executable
-        os.chmod(str_full_script_name, 0774)
+        os.chmod(str_full_script_name, 0o774)
         # Return the script file name to call.
         return(str_full_script_name)
 
@@ -269,7 +269,7 @@ class QSUBRunner(Runner):
             hndl_write_script.write("\n".join(lstr_script))
 
         # Make file executable
-        os.chmod(str_full_script_name, 0774)
+        os.chmod(str_full_script_name, 0o774)
 
         # Return the script file name to call.
         return(str_full_script_name)
