@@ -7,6 +7,10 @@ from __future__ import unicode_literals
 import Graph
 import os
 import Resource
+try:
+    _ = basestring
+except NameError:
+    basestring = str
 
 """
 Command module focuses on code that abstracts a command line command

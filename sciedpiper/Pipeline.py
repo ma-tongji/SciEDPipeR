@@ -26,6 +26,10 @@ import shutil
 import Resource
 import sys
 import time
+try:
+    _ = basestring
+except NameError:
+    basestring = str
 
 # Constants
 # This is a list of paths that should never be allowed to be deleted
@@ -1051,7 +1055,7 @@ class Pipeline:
         """
 
         str_command_with_replacement = cmd_cur.str_id
-        for str_cmd, str_path in dict_update_cur.iteritems():
+        for str_cmd, str_path in dict_update_cur.items():
             if str_cmd in cmd_cur.str_id:
                 str_command_with_replacement = str_command_with_replacement.replace( str_cmd, os.path.join( str_path, str_cmd ) )
 

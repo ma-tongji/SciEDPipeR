@@ -8,7 +8,10 @@ import calendar
 import os
 import unittest
 import time
-
+try:
+    _ = basestring
+except NameError:
+    basestring = str
 
 __author__ = "Timothy Tickle"
 __copyright__ = "Copyright 2014"

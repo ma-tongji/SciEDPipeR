@@ -12,6 +12,10 @@ import logging
 import os
 import subprocess as sp
 import time
+try:
+    _ = basestring
+except NameError:
+    basestring = str
 
 __author__ = "Timothy Tickle"
 __copyright__ = "Copyright 2014"

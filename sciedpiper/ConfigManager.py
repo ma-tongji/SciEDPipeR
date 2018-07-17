@@ -13,10 +13,13 @@ __status__ = "Development"
 import argparse
 import Arguments
 import collections
-import ConfigParser
 import PipelineRunner
 import os
 import sys
+try:
+    import ConfigParser
+except ImportError:
+    import configparser
 
 # Constants
 C_STR_ARGUMENTS_SECTION = "ARGUMENTS_OVER_WRITE"
